@@ -24,7 +24,8 @@ public class MsUserApplication {
             accountService.saveRole(new AppRole(null,"ADMIN"));
             Stream.of("user1","user2","user3","admin").forEach(u->{
                 accountService.saveUser(u,"1234","1234");
-                    });
+            });
+            accountService.addRoleToUser("admin","ADMIN");
         };
     }
 
